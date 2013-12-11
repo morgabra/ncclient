@@ -51,6 +51,7 @@ class Session(Thread):
         with self._lock:
             listeners = list(self._listeners)
         for l in listeners:
+            logger.debug("No of listeners: %d", len(self._listeners) )
             logger.debug('dispatching message to %r: %s' % (l, raw))
             l.callback(root, raw) # no try-except; fail loudly if you must!
 
