@@ -169,7 +169,7 @@ class Manager(object):
             finally:
                 m.unlock("running")
         """
-        return operations.LockContext(self._session, target)
+        return operations.LockContext(self._session, target, self._device_handler)
 
     @property
     def client_capabilities(self):
