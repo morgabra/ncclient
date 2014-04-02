@@ -38,6 +38,7 @@ CAPABILITIES = [
 """A list of URI's representing the client's capabilities. This is used during the initial capability exchange. Modify this if you need to announce some capability not already included."""
 
 OPERATIONS = {
+    "command": operations.Command,
     "get": operations.Get,
     "get_config": operations.GetConfig,
     "edit_config": operations.EditConfig,

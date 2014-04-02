@@ -15,6 +15,8 @@
 from errors import OperationError, TimeoutExpiredError, MissingCapabilityError
 from rpc import RPC, RPCReply, RPCError, RaiseMode
 
+from command import Command
+
 # rfc4741 ops
 from retrieve import Get, GetConfig, GetReply
 from edit import EditConfig, CopyConfig, DeleteConfig, Validate, Commit, DiscardChanges
@@ -46,5 +48,6 @@ __all__ = [
     'KillSession',
     'OperationError',
     'TimeoutExpiredError',
-    'MissingCapabilityError'
+    'MissingCapabilityError',
+    'Command'
 ]
